@@ -19,10 +19,9 @@ for n in range(0,nr_symbols):
 password=password.split(",")
 for n in range(0,total):
     rnd=random.randint(1,total)-1
-    rnd2=random.randint(1,total)-1
     temp=password[rnd]
-    password[rnd]=password[rnd2]
-    password[rnd2]=temp
+    password[rnd]=password[n]
+    password[n]=temp
 for letter in password:
     final+=letter
 print(f"Your password id {final}")
